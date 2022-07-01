@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  background-color: black;
+  display: flex;
+  overflow: scroll;
+}
+
+.container ul {
+  text-align: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 8px 0px;
+  padding-inline: 16px;
+}
+
+.container li {
+  color: lightgrey;
+  margin: 3px 0;
+}
+
+.syntax {
+  padding: 8px;
+}
+
+.syntax pre {
+  margin: 6px;
+}
+
+.syntax textarea {
+  height: 12px;
+  margin-left: 8px;
+}
+
+.container button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
