@@ -1,12 +1,15 @@
+import CodeEditor from "../components/CodeEditor";
+import Instructions from "../components/Instructions";
+import Result from "../components/Result";
 import styles from "./Layout.module.css";
 
 const Layout = () => {
   return (
     <div className={styles.wrapper}>
-      <div>Result</div>
+      <Result />
       <div className={styles.container}>
-        <div>Instructions</div>
-        <div>Code Editor</div>
+        <Instructions />
+        <CodeEditor />
       </div>
     </div>
   );
