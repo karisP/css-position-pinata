@@ -1,4 +1,4 @@
-import styles from "./CodeEditor.module.css";
+import styles from './CodeEditor.module.css';
 
 const CodeEditor = () => {
   return (
