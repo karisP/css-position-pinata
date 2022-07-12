@@ -1,14 +1,24 @@
+import React from 'react';
 import CodeEditor from '../components/CodeEditor';
 import Instructions from '../components/Instructions';
 import Result from '../components/Result';
 import styles from './Layout.module.css';
 
 const Layout = () => {
+  const [currentStep, setCurrentStep] = React.useState<number>(0);
+
+  const handleClickNext = () => {
+    setCurrentStep(currentStep + 1);
+  };
+
   return (
     <div className={styles.wrapper}>
       <Result />
       <div className={styles.container}>
-        <Instructions />
+        <Instructions
+          currentStep={currentStep}
+          handleClickNext={handleClickNext}
+        />
         <CodeEditor />
       </div>
     </div>

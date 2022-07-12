@@ -17,7 +17,7 @@ const CodeEditor = () => {
       </ul>
       <div className={styles.syntax}>
         <pre>
-          #parent &#123; <br /> position: relative;
+          .canvas &#123; <br /> position: relative;
         </pre>
         <textarea></textarea>
         <pre>&#125;</pre>

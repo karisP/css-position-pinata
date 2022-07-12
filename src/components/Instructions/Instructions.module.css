@@ -1,3 +1,20 @@
 .container {
   padding: 10px;
+  position: relative;
+}
+
+li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.term {
+  background-color: aquamarine;
+  color: black;
+  padding: 0 5px;
+}
+
+.container button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
 }
