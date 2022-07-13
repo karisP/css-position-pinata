@@ -16,11 +16,6 @@
 
 .wrapper div:first-child,
 .container div {
-  border: 1px solid white;
-}
-
-.wrapper div:first-child,
-.container div {
   flex: 1;
 }
 

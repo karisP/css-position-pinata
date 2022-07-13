@@ -19,7 +19,10 @@ const Layout = () => {
           currentStep={currentStep}
           handleClickNext={handleClickNext}
         />
-        <CodeEditor />
+        <CodeEditor
+          currentStep={currentStep}
+          handleClickNext={handleClickNext}
+        />
       </div>
     </div>
   );
