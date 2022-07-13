@@ -3,6 +3,12 @@
   position: relative;
 }
 
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 li:not(:last-child) {
   margin-bottom: 10px;
 }

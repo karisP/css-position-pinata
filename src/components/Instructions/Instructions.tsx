@@ -1,10 +1,5 @@
-import React from 'react';
+import { instructions } from '../../data/instructions';
 import styles from './Instructions.module.css';
-
-type Instructions = {
-  text: string;
-  action: string | null;
-};
 
 type InstructionsProps = {
   currentStep: number;
@@ -12,20 +7,12 @@ type InstructionsProps = {
 };
 
 const Instructions = (props: InstructionsProps) => {
-  const instructions: Instructions[] = [
-    {
-      text: 'You have been given a canvas to build the scenery for the party. Start by setting the canvas to position relative.',
-      action: 'Next'
-    },
-    {
-      text: 'Now we need to set the grass to the bottom of the screen using position fixed',
-      action: 'Next'
-    }
-  ];
-
   return (
     <div className={styles.container}>
-      <h1>CSS Position Pinata</h1>
+      <div className={styles.titleContainer}>
+        <h1>CSS Position Pinata</h1>
+        <span>{props.currentStep + 1}/16</span>
+      </div>
       <p>
         Welcome to the Pinata Party! This game was created to help you
         understand and practice using the css position properties.
