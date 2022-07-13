@@ -1,6 +1,32 @@
+import { ChangeEvent, useState } from 'react';
+import { codeSnippets } from '../../data/codeSnippets';
 import styles from './CodeEditor.module.css';
 
-const CodeEditor = () => {
+type CodeEditorProps = {
+  currentStep: number;
+  handleClickNext: () => void;
+};
+
+const CodeEditor = (props: CodeEditorProps) => {
+  const [value, setValue] = useState<string | undefined>();
+
+  const snippetClassNames = codeSnippets[props.currentStep].classNames;
+
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value);
+  };
+
+  const handleOnSubmit = () => {
+    if (props.currentStep < codeSnippets.length - 1) {
+      if (value !== codeSnippets[props.currentStep].expected.trim()) {
+        alert('try again');
+      } else {
+        props.handleClickNext();
+        setValue('');
+      }
+    }
+  };
+
   return (
     <div className={styles.container}>
       <ul>
@@ -16,13 +42,30 @@ const CodeEditor = () => {
         <li>10</li>
       </ul>
       <div className={styles.syntax}>
-        <pre>
-          .canvas &#123; <br /> position: relative;
-        </pre>
-        <textarea></textarea>
-        <pre>&#125;</pre>
+        <>
+          {snippetClassNames.map((c) => {
+            return (
+              <>
+                <pre>.{c.class} &#123;</pre>
+                {c.properties?.map((p, key) => {
+                  return (
+                    <pre className={styles.properties} key={key}>
+                      {p}
+                    </pre>
+                  );
+                })}
+                {c.input ? (
+                  <input onChange={(e) => handleOnChange(e)} value={value} />
+                ) : undefined}
+                <pre>&#125;</pre>
+              </>
+            );
+          })}
+        </>
       </div>
-      <button>Submit</button>
+      <button onClick={handleOnSubmit} type="submit">
+        Submit
+      </button>
     </div>
   );
 };
