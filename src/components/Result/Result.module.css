@@ -26,3 +26,11 @@
 .hidden {
   display: none;
 }
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}

@@ -1,11 +1,23 @@
 import styles from './Result.module.css';
+import { results } from '../../data/results';
 
-const Result = () => {
+type ResultProps = {
+  currentStep: number;
+};
+
+const Result = (props: ResultProps) => {
+  const containerClass = results[props.currentStep].container;
+  const branchClass = results[props.currentStep].branch;
+  const skyClass = results[props.currentStep].sky;
+  const grassClass = results[props.currentStep].grass;
+
   return (
-    <div className={styles.container}>
-      <div className={`${styles.branch} ${styles.hidden}`}>branch</div>
-      <div className={`${styles.sky} ${styles.hidden}`}>sky</div>
-      <div className={`${styles.grass} ${styles.hidden}`}>grass</div>
+    <div className={`${styles.container} ${styles[`${containerClass}`]}`}>
+      <div className={`${styles.branch} ${styles[`${branchClass}`]}`}>
+        branch
+      </div>
+      <div className={`${styles.sky} ${styles[`${skyClass}`]}`}>sky</div>
+      <div className={`${styles.grass} ${styles[`${grassClass}`]}`}>grass</div>
       <span>canvas</span>
     </div>
   );

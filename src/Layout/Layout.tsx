@@ -13,7 +13,7 @@ const Layout = () => {
 
   return (
     <div className={styles.wrapper}>
-      <Result />
+      <Result currentStep={currentStep} />
       <div className={styles.container}>
         <Instructions
           currentStep={currentStep}
