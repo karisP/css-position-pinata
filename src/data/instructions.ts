@@ -11,5 +11,13 @@ export const instructions: Instructions[] = [
   {
     text: 'Now we need to set the grass to the bottom of the screen using position fixed',
     action: 'Next'
+  },
+  {
+    text: 'Step 3',
+    action: 'Next'
+  },
+  {
+    text: 'Step 4',
+    action: 'Next'
   }
 ];

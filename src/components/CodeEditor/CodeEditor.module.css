@@ -9,7 +9,7 @@
   text-align: right;
   list-style-type: none;
   margin: 0;
-  padding: 8px 0px;
+  padding: 16px 0px;
   padding-inline: 16px;
 }
 
@@ -21,22 +21,16 @@
 .syntax {
   padding: 8px;
 }
-
-.syntax pre {
-  margin: 6px;
+.syntax .selector {
+  color: var(--secondary);
 }
 
 .syntax .properties {
   margin-left: 23px;
+  color: var(--primary-light);
 }
 
 .syntax input {
   height: 12px;
   margin-left: 23px;
-}
-
-.container button {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
 }

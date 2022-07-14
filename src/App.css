@@ -1,9 +1,37 @@
+:root {
+  --primary: #3a7199;
+  --primary-light: #d3e5ee;
+  --secondary: #f2ae45;
+  --tertiary: #d35557;
+}
+
 .App {
-  background-color: rgb(0, 139, 139);
+  background-color: var(--primary);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: white;
+}
+
+button {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-weight: 700;
+}
+
+button:hover {
+  background-color: #f2ad45ef;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #f2ad45e1;
 }

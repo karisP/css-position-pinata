@@ -10,7 +10,7 @@ const Instructions = (props: InstructionsProps) => {
   return (
     <div className={styles.container}>
       <div className={styles.titleContainer}>
-        <h1>CSS Position Pinata</h1>
+        <h1>CSS Position Pinata 🎉 </h1>
         <span>{props.currentStep + 1}/16</span>
       </div>
       <p>

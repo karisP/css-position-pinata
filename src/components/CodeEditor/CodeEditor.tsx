@@ -46,7 +46,7 @@ const CodeEditor = (props: CodeEditorProps) => {
           {snippetClassNames.map((c) => {
             return (
               <>
-                <pre>.{c.class} &#123;</pre>
+                <pre className={styles.selector}>.{c.class} &#123;</pre>
                 {c.properties?.map((p, key) => {
                   return (
                     <pre className={styles.properties} key={key}>
@@ -57,7 +57,7 @@ const CodeEditor = (props: CodeEditorProps) => {
                 {c.input ? (
                   <input onChange={(e) => handleOnChange(e)} value={value} />
                 ) : undefined}
-                <pre>&#125;</pre>
+                <pre className={styles.selector}>&#125;</pre>
               </>
             );
           })}
