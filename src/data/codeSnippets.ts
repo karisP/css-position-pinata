@@ -40,12 +40,17 @@ export const codeSnippets: CodeSnippets[] = [
     classNames: [
       {
         class: 'canvas',
-        properties: ['position: relative;'],
+        properties: ['position: relative;', 'overflow: scroll;'],
+        input: false
+      },
+      {
+        class: 'tree',
+        properties: ['height: 110%'],
         input: false
       },
       {
         class: 'grass',
-        properties: ['position: fixed;', 'bottom: 0;'],
+        properties: ['position: fixed;', 'bottom: 30px;'],
         input: false
       }
     ],

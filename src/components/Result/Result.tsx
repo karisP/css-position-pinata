@@ -8,6 +8,7 @@ type ResultProps = {
 const Result = (props: ResultProps) => {
   const containerClass = results[props.currentStep].container;
   const branchClass = results[props.currentStep].branch;
+  const treeClass = results[props.currentStep].tree;
   const skyClass = results[props.currentStep].sky;
   const grassClass = results[props.currentStep].grass;
 
@@ -17,6 +18,7 @@ const Result = (props: ResultProps) => {
         branch
       </div>
       <div className={`${styles.sky} ${styles[`${skyClass}`]}`}>sky</div>
+      <div className={`${styles.tree} ${styles[`${treeClass}`]}`}>tree</div>
       <div className={`${styles.grass} ${styles[`${grassClass}`]}`}>grass</div>
       <span>canvas</span>
     </div>

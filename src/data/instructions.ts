@@ -13,7 +13,7 @@ export const instructions: Instructions[] = [
     action: 'Next'
   },
   {
-    text: 'Step 3',
+    text: 'Notice how the grass is always 30px from the bottom of the screen not canvas, allowing for tall elements to scroll behind it.',
     action: 'Next'
   },
   {

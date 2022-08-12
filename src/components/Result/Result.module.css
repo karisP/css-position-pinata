@@ -1,5 +1,6 @@
 .container {
   background-color: #ddd6cd;
+  overflow: scroll;
 }
 
 .container span {
@@ -10,6 +11,12 @@
 .branch {
   background-color: brown;
   padding: 5px;
+}
+
+.tree {
+  background-color: brown;
+  width: 40px;
+  height: 110%;
 }
 
 .sky {
@@ -33,5 +40,6 @@
 
 .fixed {
   position: fixed;
-  bottom: 0;
+  bottom: 30px;
+  width: calc(50% - 46px);
 }
